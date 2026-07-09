@@ -17,3 +17,12 @@ class CSVFileHandler:
             print('Arquivo Inexistente')
             return []
         
+    def save_file(self, output_path, dados):
+        if not dados:
+            return
+        with open(output_path, "w", newline= "", encoding="utf-8") as arquivo:
+            colunas = dados[0].keys()
+            writer = csv.DictWriter(arquivo, fieldnames=colunas)
+
+            writer.writeheader()
+            writer.writerows(dados)

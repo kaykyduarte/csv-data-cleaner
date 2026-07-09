@@ -40,3 +40,15 @@ class CSVDataCleaner:
                    chaves_vistas.add(assinatura)
 
         return lista_limpa
+    
+    def clean_all(self, dados):
+        dados = self.clean_name(dados)
+        dados = self.clean_city(dados)
+
+        dados = self.remove_nulls(dados)
+        after_nulls = len(dados)
+
+        dados = self.remove_duplicates(dados)
+        after_duplicates = len(dados)
+
+        return dados, after_nulls, after_duplicates
