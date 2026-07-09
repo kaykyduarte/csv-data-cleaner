@@ -11,7 +11,7 @@ O fluxo atual do projeto:
 3. Remove linhas com valores nulos nas colunas obrigatórias
 4. Remove linhas duplicadas com base em `nome`, `idade` e `cidade`
 5. Exibe um relatório no terminal
-6. Salva o resultado final em `data/processed/clean_dataset.csv`
+6. Salva o resultado final em novo arquivo limpo
 
 ## Estrutura
 
@@ -80,9 +80,9 @@ python src/main.py
 ```text
 ========== RELATÓRIO ==========
 Linhas originais: 40
-Valores nulos removidos: X
-Duplicatas removidas: Y
-Linhas restantes: Z
+Valores nulos removidos: 7
+Duplicatas removidas: 6
+Linhas restantes: 28
 ===============================
 ```
 
@@ -95,3 +95,10 @@ Este projeto foi feito para praticar conceitos como:
 - limpeza de dados sem bibliotecas externas
 - remoção de nulos e duplicatas
 - organização do código em classes
+
+## Próximas melhorias
+
+- Adicionar testes unitários
+- Melhorar tratamento de erros
+- Criar logs do pipeline
+- Tornar as colunas obrigatórias configuráveis
